@@ -18,7 +18,7 @@ const RotatingGlobe = () => {
         <sphereGeometry args={[1, 32, 32]} />
         <meshStandardMaterial
           map={new THREE.TextureLoader().load(
-            "https://threejs.org/examples/textures/earth.jpg"
+            "https://threejs.org/examples/#webgl_clipping_intersection"
           )}
         />
       </mesh>
