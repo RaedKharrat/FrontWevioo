@@ -1,0 +1,184 @@
+.project-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 16px;
+    padding: 16px;
+    background-color: #121212; 
+    color: #e0e0e0; 
+  }
+  
+  .search-container {
+    display: flex;
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+    margin-bottom: 20px; /* Space below the search bar */
+    position: relative; /* Position relative for the icon */
+  }
+  
+  .search-bar {
+    width: 100%;
+    max-width: 600px; /* Limit the maximum width */
+    padding: 12px 20px; /* Increase padding for a more spacious look */
+    margin-left: 10px; /* Space between icon and input */
+    border: 2px solid #4dd0e1; /* Thicker border */
+    border-radius: 25px; /* Rounded corners */
+    font-size: 16px; /* Font size */
+    transition: border-color 0.3s, box-shadow 0.3s; /* Smooth transition effects */
+    outline: none; /* Remove default outline */
+  }
+  
+  .search-bar:focus {
+    border-color: #007bff; /* Change border color on focus */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Add shadow effect */
+  }
+  
+  /* Optional: Placeholder styling */
+  .search-bar::placeholder {
+    color: #aaa; /* Placeholder color */
+    font-style: italic; /* Italic style */
+  }
+  
+  .search-icon {
+    position: absolute; /* Position the icon relative to the input */
+    left: 15px; /* Space from the left */
+    color: #4dd0e1; /* Icon color */
+    font-size: 18px; /* Icon size */
+  }
+  
+  .project-card {
+    background: #1e1e1e; 
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    padding: 16px;
+    color: #e0e0e0;
+    transition: transform 0.2s ease, box-shadow 0.2s ease; 
+  }
+  
+  .project-card:hover {
+    transform: translateY(-5px); 
+    box-shadow: 0 8px 12px rgba(36, 198, 252, 0.2); 
+  }
+  
+  .project-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  
+  .project-header h3 {
+    font-size: clamp(14px, 2vw, 16px);
+    font-weight: bold;
+    color: #ffffff; 
+  }
+  
+  .status {
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: clamp(10px, 1.5vw, 12px);
+    white-space: nowrap;
+  }
+  
+  .status.completed {
+    background-color: #28a745;
+    color: #fff;
+  }
+  
+  .status.pending {
+    background-color: #ffc107;
+    color: #000;
+  }
+  
+  .status.frontend-completed {
+    background-color: #17a2b8;
+    color: #fff;
+  }
+  
+  .status.backend-completed {
+    background-color: #98b817;
+    color: #fff;
+  }
+  
+  .status.canceled {
+    background-color: #dd0c0c;
+    color: #fff;
+  }
+  
+  h4 {
+    font-size: clamp(12px, 1.8vw, 14px);
+    margin: 8px 0;
+    color: #ffffff;
+  }
+  
+  p {
+    font-size: clamp(11px, 1.6vw, 12px);
+    color: #b0b0b0;
+  }
+  
+  .members {
+    display: flex;
+    align-items: center;
+    margin: 8px 0;
+    flex-wrap: wrap;
+    gap: 4px;
+  }
+  
+  .members img {
+    width: clamp(20px, 4vw, 24px);
+    height: clamp(20px, 4vw, 24px);
+    border-radius: 50%;
+    border: 2px solid #ffffff; 
+  }
+  
+  .extra-members {
+    font-size: clamp(10px, 1.5vw, 12px);
+    color: #b0b0b0;
+  }
+  
+  .project-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 8px;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  
+  .date {
+    font-size: clamp(10px, 1.5vw, 12px);
+    color: #999;
+  }
+  
+  .stats {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+  
+  .progress-bar {
+    width: clamp(60px, 10vw, 80px);
+    height: 8px;
+    background: #333;
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  
+  .progress-bar .progress {
+    height: 100%;
+    background: #007bff; 
+  }
+  
+  @media screen and (max-width: 480px) {
+    .project-list {
+      grid-template-columns: 1fr;
+      padding: 12px;
+      gap: 12px;
+    }
+  
+    .project-card {
+      padding: 12px;
+    }
+  }

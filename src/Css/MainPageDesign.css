@@ -1,0 +1,71 @@
+/* Dark Mode AppBar */
+.appbar {
+    width: 100%;
+    background: linear-gradient(180deg, #008ff6, #1696f1);
+    color: #f1f1f1; /* Light color for text */
+    padding: 1rem;
+    box-shadow: 0px 4px 6px rgba(7, 71, 116, 0.2); /* Slightly darker shadow */
+    position: fixed; /* Fixed position for staying at the top */
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Ensure it appears above other content */
+    text-align: center;
+
+  }
+  
+  .appbar h1 {
+    margin: 0;
+    font-size: clamp(1.2rem, 2.5vw, 1.5rem);
+    font-weight: bold;
+  }
+  
+  /* Adjust layout to account for the AppBar height */
+  .main-content {
+    display: flex;
+    flex-direction: row;
+    margin-top: 3rem; /* Space for the fixed AppBar */
+    margin-bottom: -5rem; /* Space for the fixed AppBar */
+    background-color: #121212; /* Dark background for the main content */
+    color: #e0e0e0; /* Light text color */
+  }
+  
+  .sidebar-section {
+    width: 250px; /* Fixed width for larger screens */
+    color: #e0e0e0; /* Light text color for sidebar */
+    border-right: 1px solid #444; /* Subtle border */
+    transition: all 0.3s ease;
+  }
+  
+  .content-section {
+    flex: 1; /* Takes remaining space */
+    background-color: #121212; /* Slightly lighter dark background */
+    color: #e0e0e0; /* Light text color */
+    padding: 1rem;
+  }
+
+  /* Responsive breakpoints */
+  @media screen and (max-width: 768px) {
+    .main-content {
+      flex-direction: column;
+    }
+
+    .sidebar-section {
+      width: 100%;
+      border-right: none;
+      border-bottom: 1px solid #444;
+    }
+
+    .content-section {
+      width: 100%;
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    .appbar {
+      padding: 0.75rem;
+    }
+    
+    .main-content {
+      margin-top: 3.5rem;
+    }
+  }
